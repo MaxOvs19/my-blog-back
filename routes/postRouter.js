@@ -2,7 +2,7 @@ import { Router } from "express";
 
 const router = new Router();
 
-router.get("/me", (req, res) => {
+router.get("/get-post", (req, res) => {
   res.send("My name Max");
 });
 
