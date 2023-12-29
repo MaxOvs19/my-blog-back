@@ -1,7 +1,7 @@
 import express from "express";
 import cors from "cors";
 import { db } from "./db.js";
-import { errorHeandler } from "./middleware/ErrorHandlingMiddleware.js";
+import { errorHandler } from "./middleware/ErrorHandlingMiddleware.js";
 
 import router from "./routes/index.js";
 
@@ -16,7 +16,7 @@ app.use(cors());
 
 app.use("/api", router);
 
-app.use(errorHeandler);
+app.use(errorHandler);
 
 const start = async () => {
   try {
